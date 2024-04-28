@@ -1,0 +1,75 @@
+//
+// HTTP Requests for GCP Cloud Functions
+//
+
+GET https://europe-west2-dark-form-304415.cloudfunctions.net/CakesAPI/cakes
+
+
+POST https://europe-west2-dark-form-304415.cloudfunctions.net/CakesAPI/cakes
+content-type: application/json
+
+{
+   "name":"Cookie cake",
+   "comment":"A moist, dense, sweet cake made with cookies.",
+   "imageUrl":"https://upload.wikimedia.org/wikipedia/commons/f/fe/Carrot_cake_at_America_Graffiti_%28cropped%29.jpg",
+   "yumFactor": 2
+}
+
+
+GET https://europe-west2-dark-form-304415.cloudfunctions.net/CakeAPI/cake?id=cEJq8614ZGdNETwlcNbP
+
+
+DELETE https://europe-west2-dark-form-304415.cloudfunctions.net/CakeAPI/cake
+content-type: application/json
+
+{
+    "id":"HcbXxuH5yUht4G8uQ9jh"
+}
+
+//
+// HTTP Requests for local development and testing
+//
+
+GET http://localhost:4001/cakes
+
+
+POST http://localhost:4001/cakes
+content-type: application/json
+
+{
+   "name":"Carrot cake",
+   "comment":"A moist, dense, sweet cake made with carrots.",
+   "imageUrl":"https://upload.wikimedia.org/wikipedia/commons/f/fe/Carrot_cake_at_America_Graffiti_%28cropped%29.jpg",
+   "yumFactor": 2
+}
+
+POST http://localhost:4001/cakes
+content-type: application/json
+
+{
+   "name":"Victoria cake",
+   "comment":"consisting of jam and whipped double cream or vanilla cream sandwiched between two sponge cakes.",
+   "imageUrl":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Cake_from_WHR%28P%29.jpg/2560px-Cake_from_WHR%28P%29.jpg",
+   "yumFactor": 3
+}
+
+POST http://localhost:4001/cakes
+content-type: application/json
+
+{
+   "name":"Victoria cake - New 1",
+   "comment":"consisting of jam and whipped double cream or vanilla cream sandwiched between two sponge cakes.",
+   "imageUrl":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Cake_from_WHR%28P%29.jpg/2560px-Cake_from_WHR%28P%29.jpg",
+   "yumFactor": 5
+}
+
+GET http://localhost:4001/cake?id=cEJq8614ZGdNETwlcNbP
+
+
+DELETE http://localhost:4001/cake
+content-type: application/json
+
+{
+    "id":"HAZJBSvGXtoDdPU59fVS"
+}
+
